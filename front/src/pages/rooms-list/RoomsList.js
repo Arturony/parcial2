@@ -59,7 +59,7 @@ export const RoomsList = () =>
       </div>
 
       <h1>
-      <FormattedMessage id="room"
+      <FormattedMessage id="myRooms"
       defaultMessage="My Rooms"/>
       </h1>
       
@@ -93,7 +93,7 @@ export const RoomsList = () =>
             </div>
       </div>
 
-      <h2> <FormattedMessage id="room"
+      <h2> <FormattedMessage id="power"
                     defaultMessage="Power Usage (KwH) - Today"/> </h2>
       <div id="canvas">   
         {rooms.rooms && <PieGraph data={rooms.rooms}/>}

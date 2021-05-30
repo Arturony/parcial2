@@ -52,7 +52,7 @@ export const HomesList = () => {
                         {setOnline()}
           </div>
       <h1>
-      <FormattedMessage id="space"
+      <FormattedMessage id="spaces"
       defaultMessage="My Spaces"/>
       </h1>
 

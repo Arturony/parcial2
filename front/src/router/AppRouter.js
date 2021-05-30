@@ -29,6 +29,7 @@ export const AppRouter = () => {
           </Route>
         </Switch>
       </Router>
+
     </IntlProvider>
   );
 };

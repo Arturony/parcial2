@@ -1,5 +1,4 @@
-import localeEsMessagesES from "../locales/es.json";
-import localeEsMessagesEN from "../locales/en.json";
+import {I18nProvider, LOCALES} from "../i18n/index";
 
 const HOME_API = "/api/homes";
 
@@ -23,24 +22,16 @@ function getDevices()
   return room;
 }
 
-let i18nConfig = {
-  locale: 'es',
-  messages: localeEsMessagesES
-};
+let locale = LOCALES.ENGLISH;
 
 function onChangeLanguage(lang) 
 {
-  switch (lang) {
-      case 'es': i18nConfig.messages = localeEsMessagesES; break;
-      case 'en': i18nConfig.messages = localeEsMessagesEN; break;
-      default: i18nConfig.messages = localeEsMessagesEN; break;
-  }
-  i18nConfig.locale = lang;
+  locale = lang;
 }
 
 function getI18Config()
 {
-  return i18nConfig;
+  return locale;
 }
 
 const getJSON = (response) => response.json();

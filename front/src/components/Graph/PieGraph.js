@@ -87,7 +87,7 @@ class Card extends Component
         <div>
             <div id="canvas" className="row">
                 <div id="tooltip" class="hidden" className="tooltip">
-                        <FormattedMessage id="room"
+                        <FormattedMessage id="energy"
                             defaultMessage="Energy Consumption"/>
                         <p><span id="value">100</span></p>
                 </div>

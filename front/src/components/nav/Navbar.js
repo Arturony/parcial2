@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { FormattedMessage } from "react-intl";
-import {onChangeLanguage} from "../../services/utils";
+import {I18nProvider, LOCALES} from "../../i18n/index";
 
 export const Navbar = ({ setLanguage }) => 
 {
@@ -36,9 +36,9 @@ export const Navbar = ({ setLanguage }) =>
             <div className="navbar-nav-controls">
              {/** here lang selector */  }
              <div>
-              <button onClick={() => onChangeLanguage('es')}><FormattedMessage id="spanish"
+              <button onClick={() => setLanguage(LOCALES.SPANISH)}><FormattedMessage id="spanish"
               defaultMessage="Spanish"/></button>
-              <button onClick={() => onChangeLanguage('en')}><FormattedMessage id="english"
+              <button onClick={() => setLanguage(LOCALES.ENGLISH)}><FormattedMessage id="english"
               defaultMessage="English"/></button>
             </div>
             </div>
