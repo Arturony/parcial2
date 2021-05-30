@@ -1,0 +1,12 @@
+{
+	"smart": "Smart Home",
+	"space": "My Spaces",
+	"room": "My rooms",
+	"device": "Device",
+	"value": "Value",
+    "spanish": "Spanish",
+    "english": "English",
+	"energy": "Energy Consumption",
+	"power": "Power Usage (KwH) - Today",
+	"online": "You are "
+}

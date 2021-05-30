@@ -2,13 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { FormattedMessage } from "react-intl";
+import {onChangeLanguage} from "../../services/utils";
 
-export const Navbar = ({ setLanguage }) => {
+export const Navbar = ({ setLanguage }) => 
+{
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <FormattedMessage id="smart" />
+          <FormattedMessage id="smart" 
+          defaultMessage="Smart House"/>
         </Link>
         <button
           className="navbar-toggler"
@@ -25,11 +29,18 @@ export const Navbar = ({ setLanguage }) => {
           <div className="navbar-nav">
             <div className="navbar-nav-links">
               <Link className="nav-link active" aria-current="page" to="/homes">
-                <FormattedMessage id="spaces" />
+                <FormattedMessage id="spaces"
+                defaultMessage="My Spaces" />
               </Link>
             </div>
             <div className="navbar-nav-controls">
              {/** here lang selector */  }
+             <div>
+              <button onClick={() => onChangeLanguage('es')}><FormattedMessage id="spanish"
+              defaultMessage="Spanish"/></button>
+              <button onClick={() => onChangeLanguage('en')}><FormattedMessage id="english"
+              defaultMessage="English"/></button>
+            </div>
             </div>
           </div>
         </div>
